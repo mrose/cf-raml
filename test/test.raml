@@ -1,0 +1,70 @@
+#%RAML 0.8
+---
+title: testy API
+baseUri: https://www.mydomain.com/{version}
+version: v1
+
+/:
+  get:
+    queryParameters:
+      name:
+        displayName:
+        type:
+        description:
+        example:
+        required:
+      zipcode:
+        displayName:
+        type:
+        description:
+        example:
+        required:
+
+/aboutus:
+  get:
+
+/contactus:
+  get:
+
+/privacypolicy:
+  get:
+
+/termsandconditionsofuse:
+  get:
+
+/productsandservicesdisclaimer:
+  get:
+
+/foo:
+  get:
+  /{fooID}:
+    get:
+    /bar:
+      get:
+      /{barID}:
+        get:
+        /baz:
+          get:
+          /{bazID}:
+            get:
+
+/qux:
+  get:
+    queryParameters:
+      qux:
+        displayName:
+        type:
+        description:
+        example:
+        required: false
+  /{quxID}:
+    get:
+    put:
+      queryParameters:
+        auth_token:
+          displayName: authorization token
+          type: string
+          description: a single use token authorizing a single request to put data into the datastore
+          example:
+          required: true
+
